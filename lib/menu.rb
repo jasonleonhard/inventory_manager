@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 require 'json'
 require 'pp'
-# require '../data/inventory'
 
 class Menu
 
@@ -12,9 +11,6 @@ class Menu
     puts 'Which file would you like to parse? e.g. inventory.json'
     file = gets.chomp
     file_str = File.read('data/' + file)
-    # or for ease
-    # file_str = File.read('data/inventory.json') 
-    # file_str = File.read('data/inventory2.json') 
     @file_arr = JSON.parse(file_str)
   end
 
