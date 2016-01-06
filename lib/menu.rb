@@ -15,4 +15,7 @@ class Menu
     @file_arr = JSON.parse(file_str)
   end
 
+  def show_JSON
+    pp @file_arr
+  end
 end

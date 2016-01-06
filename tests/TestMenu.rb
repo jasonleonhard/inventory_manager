@@ -12,8 +12,15 @@ class TestMenu < MiniTest::Test
     assert @menu, nil
   end
 
+  def test_show_JSON_responds
+    assert_respond_to @menu, :show_JSON
+  end
+
   def call
     @menu.filename
   end
 
+  def test_call_responds
+    self.call
+  end
 end
