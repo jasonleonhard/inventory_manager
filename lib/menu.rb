@@ -92,7 +92,7 @@ class Menu
   end
 
   def d
-    puts 'Which items have a title, track, or chapter that contains a year?'
+    puts 'd. Which items have a title, track, or chapter that contains a year?'
     @file_arr.each do |i|
       if i['title'] || i['tracks'] || i['chapters'] && i['year']
         pp i
