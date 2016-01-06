@@ -1,0 +1,55 @@
+[{
+    "price": 15.99,
+    "chapters": [
+        "one",
+        "two",
+        "three"
+    ],
+    "year": 1999,
+    "title": "foo",
+    "author": "mary",
+    "type": "book"
+}, {
+    "price": 11.99,
+    "minutes": 90,
+    "year": 2004,
+    "title": "bar",
+    "director": "alan",
+    "type": "dvd"
+}, {
+    "price": 15.99,
+    "chapters": [
+        "one",
+        "two",
+        "three"
+    ],
+    "year": 1999,
+    "title": "foo",
+    "author": "mary",
+    "type": "cd"
+}, {
+    "price": 15.99,
+    "tracks": [{
+        "seconds": 180,
+        "name": "one"
+    }, {
+        "seconds": 200,
+        "name": "two"
+    }, {
+        "seconds": 2300,
+        "name": "three"
+    }, {
+        "seconds": 200,
+        "name": "four"
+    }, {
+        "seconds": 200,
+        "name": "five"
+    }, {
+        "seconds": 200,
+        "name": "six"
+    }],
+    "year": 2000,
+    "title": "baz",
+    "author": "joan",
+    "type": "cd"
+}]

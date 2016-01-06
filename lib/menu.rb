@@ -12,7 +12,7 @@ class Menu
     puts 'Which file would you like to parse? e.g. data/inventory.json'
     # file = gets.chomp
     # file_str = File.read(file)
-    file_str = File.read('data/inventory.json')
+    file_str = File.read('data/inventory2.json')
     @file_arr = JSON.parse(file_str)
   end
 
@@ -81,6 +81,13 @@ class Menu
 
   def c
     puts 'c. Which authors have also released cds?'
+    @file_arr.each do |i| 
+      if i['type'] == 'cd'
+        if i['author'] != nil
+          puts i['author']
+        end
+      end
+    end
     self.questions
   end
 
