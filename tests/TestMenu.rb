@@ -10,6 +10,10 @@ class TestMenu < MiniTest::Test
 
   def test_menu_is_nil
     assert @menu, nil
-  end  
+  end
+
+  def call
+    @menu.filename
+  end
 
 end
