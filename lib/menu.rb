@@ -49,6 +49,12 @@ class Menu
 
   def a
     puts 'a. What are the 5 most expensive items from each category?'
+    arr = []
+    size = @file_arr.size
+    0.upto(size-1) do |f|
+      arr[f] = @file_arr[f].values.first
+    end
+    puts arr.sort.reverse[0..4] # or puts arr.sort.last(5).reverse
     self.questions
   end
 
