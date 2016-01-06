@@ -9,10 +9,12 @@ class Menu
   end
 
   def filename
-    puts 'Which file would you like to parse? e.g. data/inventory.json'
-    # file = gets.chomp
-    # file_str = File.read(file)
-    file_str = File.read('data/inventory2.json')
+    puts 'Which file would you like to parse? e.g. inventory.json'
+    file = gets.chomp
+    file_str = File.read('data/' + file)
+    # or for ease
+    # file_str = File.read('data/inventory.json') 
+    # file_str = File.read('data/inventory2.json') 
     @file_arr = JSON.parse(file_str)
   end
 
@@ -21,6 +23,7 @@ class Menu
   end
 
   def questions
+    puts '--------------------------------------------------------------------'
     puts 'Choose one: a, b, c, d, or e'
     puts 'a. What are the 5 most expensive items from each category?'
     puts 'b. Which cds have a total running time longer than 60 minutes?'
@@ -28,6 +31,7 @@ class Menu
     puts 'd. Which items have a title, track, or chapter that contains a year?'
     puts 'e. exit, quit, e, q, x'
     puts 'f. Show JSON file'
+    puts '--------------------------------------------------------------------'
     input = gets.chomp
     if input == 'a'
       self.a
