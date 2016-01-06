@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
-require './lib/menu'
+require_relative '../lib/menu'
 
 menu = Menu.new
+menu.filename
+
