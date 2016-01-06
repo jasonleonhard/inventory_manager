@@ -10,8 +10,9 @@ class Menu
 
   def filename
     puts 'Which file would you like to parse? e.g. data/inventory.json'
-    file = gets.chomp
-    file_str = File.read(file)
+    # file = gets.chomp
+    # file_str = File.read(file)
+    file_str = File.read('data/inventory.json')
     @file_arr = JSON.parse(file_str)
   end
 
@@ -60,6 +61,21 @@ class Menu
 
   def b
     puts 'b. Which cds have a total running time longer than 60 minutes?'
+    time = 0
+    @file_arr.each do |i|
+      if i['type'] == 'cd' && i['tracks'] 
+        i['tracks'].each do |j|
+          if j['seconds']
+            time += j['seconds']
+          end
+        end
+        if time > 3600 # 60min * 60sec
+          puts time
+        else
+          puts 'There are no cds with a total running time longer than 60 minutes'
+        end 
+      end
+    end
     self.questions
   end
 
