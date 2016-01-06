@@ -38,6 +38,4 @@ class TestMenu < MiniTest::Test
       @menu.must_equal nil
     end
   end
-
-
 end
