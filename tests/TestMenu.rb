@@ -8,4 +8,8 @@ class TestMenu < MiniTest::Test
     @menu = Menu.new
   end
 
+  def test_menu_is_nil
+    assert @menu, nil
+  end  
+
 end
