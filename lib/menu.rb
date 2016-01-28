@@ -1,5 +1,10 @@
 #!/usr/bin/env ruby
+
+# 3 different gems can be implimented
 require 'json'
+# require 'crack'
+# require 'oj'
+
 require 'pp'
 
 class Menu
@@ -8,10 +13,24 @@ class Menu
   end
 
   def filename
-    puts 'Which file would you like to parse? e.g. inventory.json'
+    puts 'Which file would you like to parse? e.g. inventory.json or click enter.'
     file = gets.chomp
-    file_str = File.read('data/' + file)
-    @file_arr = JSON.parse(file_str)
+    if file == "" 
+      file = 'inventory.json'
+      p 'defaulting to inventory.json'
+    end
+
+    if File.file?('data/' + file)                   # 1. exists
+      file_str = File.read('data/' + file)
+      # 3 different gems can be implimented
+      @file_arr = JSON.parse(file_str)              # json version  (gem)
+      # @file_arr = Crack::JSON.parse(file_str)     # crack version (gem)
+      # @file_arr = Oj.load(file_str)               # oj version    (gem)
+    elsif (file != File.file?(file)) || file != ""  # 2. does not exist and is not enter
+      p "The file '#{file}' does not exist in this directory, please choose again."
+      p "or select enter to default to inventory.json"
+      self.filename
+    end
   end
 
   def show_JSON
