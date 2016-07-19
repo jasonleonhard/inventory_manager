@@ -15,4 +15,4 @@ $ ruby tests/TestMenu.rb
 
 #### Benchmark
 
-$ ruby tests/TestBench
+$ ruby tests/TestBench.rb
