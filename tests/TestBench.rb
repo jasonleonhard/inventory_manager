@@ -18,31 +18,31 @@ Benchmark.bm do |bm|
     end
   end
   
-  bm.report('@a   ') do
+  bm.report('@a') do
     iterations.times do
       @a
     end
   end
 
-  bm.report('@b   ') do
+  bm.report('@b') do
     iterations.times do
       @b
     end
   end
 
-  bm.report('@c   ') do
+  bm.report('@c') do
     iterations.times do
       @c
     end
   end
 
-  bm.report('@d   ') do
+  bm.report('@d') do
     iterations.times do
       @d
     end
   end
   
-  bm.report('@f   ') do
+  bm.report('@f') do
     iterations.times do
       @f
     end
